@@ -10,7 +10,7 @@
     
     
     
-    <title>韩涛的个人主页</title>
+    <title>前端JSON到后端 | 韩涛的个人主页</title>
     <link href=”https://ishantao.github.io“ rel=”prefetch” />
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -153,7 +153,7 @@
                 
                 
                 
-                <li class="current">
+                <li class="">
                     <a href="/about">
                         <i class="fa fa-user"></i>关于我
                     </a>
@@ -168,21 +168,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 gal-right" id="mainstay">
-                    <!-- 搜索页面(尽可能接近ZanBlog搜索功能) -->
-
-
+                    
 <article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="https://ishantao.github.io">韩涛的个人主页</a>
+        >
+        <span>前端JSON到后端</span>
+    </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/about/index.html"></a>
+                <a href="/2018/08/30/前端JSON到后端/">前端JSON到后端</a>
             </h1>
         </div>
         <div class="tag-article">
+            
             <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2018-08-29
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/JSON/">-JSON</a>
+                
             </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2018-08-30
+            </span>
+            
         </div>
     </div>
     <!-- 小型设备详细文章 -->
@@ -190,20 +203,28 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/about/index.html"></a>
+                    <a href="/2018/08/30/前端JSON到后端/">前端JSON到后端</a>
                 </h4>
             </div>
             <p>
-                <i class="fa fa-calendar"></i> 2018-08-29
+                <i class="fa fa-calendar"></i> 2018-08-30
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/JSON/">-JSON</a>
+                
+                
+                
             </p>
         </center>
     </div>
     <div class="content-article">
-        <p>#个人简介</p>
+        <h1 id="前端JSON到后端"><a href="#前端JSON到后端" class="headerlink" title="前端JSON到后端"></a>前端JSON到后端</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> data=<span class="built_in">JSON</span>.stringify(&#123;<span class="string">"page"</span>: &#123;<span class="string">"pagenow"</span>: <span class="number">1</span>,<span class="string">"pagesize"</span>: <span class="number">20</span>&#125;,<span class="string">"file"</span>:&#123;<span class="string">"name"</span>:<span class="string">"jpg"</span>&#125;,<span class="string">"catalogs"</span>:[&#123;<span class="string">"id"</span>:<span class="number">1</span>&#125;,&#123;<span class="string">"id"</span>:<span class="number">2</span>&#125;]&#125;);</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            type:<span class="string">"POST"</span>,</span><br><span class="line">            url:<span class="string">"//访问的url"</span>,</span><br><span class="line">            data:data,</span><br><span class="line">            contentType:<span class="string">"application/json"</span>, </span><br><span class="line">            success:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">                <span class="comment">//对回传数据进行处理；</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
 
     </div>
 </article>
-
 
 
                 </div>
@@ -321,19 +342,19 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/about/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2018/08/30/前端JSON到后端/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/about/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2018/08/30/前端JSON到后端/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/about/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2018/08/30/前端JSON到后端/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/JSON/" style="font-size: 11.768054298219678px;" class="tag-cloud-link">-JSON</a>
+    <a href="/tags/JSON/" style="font-size: 8.860308214540622px;" class="tag-cloud-link">-JSON</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
