@@ -12,15 +12,23 @@
     
     <title>韩涛的个人主页</title>
     <link href=”https://ishantao.github.io“ rel=”prefetch” />
+    <div id="landlord">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+    <div class="hide-button">隐藏</div>
+</div>
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/aos.css">
 <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/live2d.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/aos.js"></script>
     <script src="/js/highslide/highslide-full.min.js"></script>
     <link rel="stylesheet" href="/js/highslide/highslide.css">
+    <link rel="stylesheet" href="/css/live2d.css">
+    
     <style type="text/css">
         @media (max-width: 768px) {
             body {
@@ -43,6 +51,12 @@
         }
       }
     </script>-->
+    <script type="text/javascript">
+    var message_Path = '../live2d/';
+    var home_Path = 'hant.live';
+    loadlive2d("live2d", "/live2d/model/tia/model.json");
+    </script>
+    <script src="/js/message.js"></script>
 </head>
 <body>
     <!-- 背景轮播图功能 -->
@@ -218,7 +232,7 @@
                 <a href="/2018/08/30/前端JSON到后端/">
                     <div class="img">
                         
-                        <img src="/imgs/preview/preview2.jpg" alt="前端JSON到后端">
+                        <img src="/imgs/preview/preview1.jpg" alt="前端JSON到后端">
                     </div>
                     <div class="info">
                         
@@ -257,7 +271,7 @@
             <p style="text-align: center;">
                 <a href="/2018/08/30/前端JSON到后端/">
                     
-                    <img src="/imgs/preview/preview4.jpg" alt="前端JSON到后端">
+                    <img src="/imgs/preview/preview2.jpg" alt="前端JSON到后端">
                 </a>
             </p>
         </div>
@@ -332,7 +346,7 @@
             <p style="text-align: center;">
                 <a href="/2018/08/29/hantao/">
                     
-                    <img src="/imgs/preview/preview1.jpg" alt="First">
+                    <img src="/imgs/preview/preview4.jpg" alt="First">
                 </a>
             </p>
         </div>
@@ -373,7 +387,7 @@
                 <a href="/2018/08/29/hello-world/">
                     <div class="img">
                         
-                        <img src="/imgs/preview/preview2.jpg" alt="Hello World">
+                        <img src="/imgs/preview/preview4.jpg" alt="Hello World">
                     </div>
                     <div class="info">
                         
@@ -407,7 +421,7 @@
             <p style="text-align: center;">
                 <a href="/2018/08/29/hello-world/">
                     
-                    <img src="/imgs/preview/preview3.jpg" alt="Hello World">
+                    <img src="/imgs/preview/preview4.jpg" alt="Hello World">
                 </a>
             </p>
         </div>
@@ -540,13 +554,13 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/08/30/前端JSON到后端/">前端JSON到后端</a>
+                    <a href="/2018/08/29/hello-world/">Hello World</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/08/29/hello-world/">Hello World</a>
+                    <a href="/2018/08/30/前端JSON到后端/">前端JSON到后端</a>
                 </span>
             </li>
             
@@ -571,7 +585,7 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/JSON/" style="font-size: 12.802579533931148px;" class="tag-cloud-link">-JSON</a>
+    <a href="/tags/JSON/" style="font-size: 18.812671977316285px;" class="tag-cloud-link">-JSON</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
