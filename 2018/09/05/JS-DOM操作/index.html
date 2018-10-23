@@ -168,15 +168,15 @@
                         
                         
                         <li>
-                            <a href="/tags/Javascript/">-Javascript</a>
-                        </li>
-                        
-                        <li>
                             <a href="/tags/Redis/">Redis</a>
                         </li>
                         
                         <li>
-                            <a href="/tags/JSON-Ajax/">-JSON -Ajax</a>
+                            <a href="/tags/Javascript/">-Javascript</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/servlet/">servlet</a>
                         </li>
                         
                         
@@ -347,14 +347,14 @@
 </code></pre><p>​    <strong>功能：</strong> 返回element元素开始和结束标签之间的HTML和文本</p>
 <p>​    <strong>语法：</strong> element.innerHTMl = “html”</p>
 <p>​    <strong>功能:</strong>  设置element元素开始和结束标签之间的HTML内容为html</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"div1"</span>&gt;</span><br><span class="line">	&lt;li&gt;haha&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">	&lt;li&gt;&lt;i&gt;hehe&lt;/i</span>&gt;&lt;/li&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;script type="text/</span>javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">	var div0 = document.getElementById("</span>div1<span class="string">").getElementsByTagName("</span>li<span class="string">");</span></span><br><span class="line"><span class="string">	for (var i = 0; i &lt; div0.length; i++) &#123;</span></span><br><span class="line"><span class="string">		console.log(div0[i]innerHTML)</span></span><br><span class="line"><span class="string">	&#125;</span></span><br><span class="line"><span class="string">	</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"div1"</span>&gt;</span><br><span class="line">	&lt;li&gt;haha&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">	&lt;li&gt;&lt;i&gt;hehe&lt;/i</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;script type="text/</span>javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">	var div0 = document.getElementById("</span>div1<span class="string">").getElementsByTagName("</span>li<span class="string">");</span></span><br><span class="line"><span class="string">	for (var i = 0; i &lt; div0.length; i++) &#123;</span></span><br><span class="line"><span class="string">		console.log(div0[i]innerHTML)</span></span><br><span class="line"><span class="string">	&#125;</span></span><br><span class="line"><span class="string">	</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
 <p>​    获取的innerHTML</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">haha</span><br><span class="line">&lt;i&gt;hehe&lt;<span class="regexp">/i&gt;</span></span><br></pre></td></tr></table></figure>
 <p>​    <strong>语法：</strong> element.className</p>
 <p>​    <strong>功能：</strong> 返回element的class属性</p>
 <p>​    <strong>语法：</strong> element.className = “cls”</p>
 <p>​    <strong>功能：</strong>设置element的class属性为cls 会清楚掉以前的类</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"div1"</span>&gt;</span><br><span class="line">	&lt;li <span class="class"><span class="keyword">class</span> </span>= <span class="string">"class1"</span>&gt;haha&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">	&lt;li class = "class1"&gt;&lt;i&gt;hehe&lt;/i</span>&gt;&lt;/li&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;script type="text/</span>javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">	var div0 = document.getElementById("</span>div1<span class="string">").getElementsByTagName("</span>li<span class="string">");</span></span><br><span class="line"><span class="string">	for (var i = 0; i &lt; div0.length; i++) &#123;</span></span><br><span class="line"><span class="string">		console.log(div0[i].className)</span></span><br><span class="line"><span class="string">	&#125;</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"div1"</span>&gt;</span><br><span class="line">	&lt;li <span class="class"><span class="keyword">class</span> </span>= <span class="string">"class1"</span>&gt;haha&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">	&lt;li class = "class1"&gt;&lt;i&gt;hehe&lt;/i</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;script type="text/</span>javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">	var div0 = document.getElementById("</span>div1<span class="string">").getElementsByTagName("</span>li<span class="string">");</span></span><br><span class="line"><span class="string">	for (var i = 0; i &lt; div0.length; i++) &#123;</span></span><br><span class="line"><span class="string">		console.log(div0[i].className)</span></span><br><span class="line"><span class="string">	&#125;</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
 <p>输出</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class1</span><br><span class="line">class2</span><br></pre></td></tr></table></figure>
 <h3 id="DOM属性的获取与设置"><a href="#DOM属性的获取与设置" class="headerlink" title="DOM属性的获取与设置"></a>DOM属性的获取与设置</h3><p>​    <strong>语法：</strong> element.getAttribute(“name”);</p>
@@ -421,6 +421,12 @@
             
             <li class="list-group-item">
                 <span class="post-title">
+                    <a href="/2018/10/23/关于Servlet的参数接收/">关于Servlet的参数接收</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
                     <a href="/2018/10/10/Redis/">Redis</a>
                 </span>
             </li>
@@ -473,6 +479,12 @@
             
             <li class="list-group-item">
                 <span class="post-title">
+                    <a href="/2018/10/10/Redis/">Redis</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
                     <a href="/2018/09/05/JS-DOM操作/">JS_DOM操作</a>
                 </span>
             </li>
@@ -485,7 +497,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/10/10/Redis/">Redis</a>
+                    <a href="/2018/10/23/关于Servlet的参数接收/">关于Servlet的参数接收</a>
                 </span>
             </li>
             
@@ -528,13 +540,15 @@
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/Javascript/" style="font-size: 13.930852300529027px;" class="tag-cloud-link">-Javascript</a>
+    <a href="/tags/Redis/" style="font-size: 13.655125196161586px;" class="tag-cloud-link">Redis</a>
     
-    <a href="/tags/Redis/" style="font-size: 15.351428114239642px;" class="tag-cloud-link">Redis</a>
+    <a href="/tags/Javascript/" style="font-size: 16.96271629110567px;" class="tag-cloud-link">-Javascript</a>
     
-    <a href="/tags/JSON-Ajax/" style="font-size: 17.241168493672202px;" class="tag-cloud-link">-JSON -Ajax</a>
+    <a href="/tags/servlet/" style="font-size: 17.987246691887346px;" class="tag-cloud-link">servlet</a>
     
-    <a href="/tags/JavaScript/" style="font-size: 11.56773322892164px;" class="tag-cloud-link">-JavaScript</a>
+    <a href="/tags/JSON-Ajax/" style="font-size: 15.838578145909228px;" class="tag-cloud-link">-JSON -Ajax</a>
+    
+    <a href="/tags/JavaScript/" style="font-size: 9.45439338119106px;" class="tag-cloud-link">-JavaScript</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
