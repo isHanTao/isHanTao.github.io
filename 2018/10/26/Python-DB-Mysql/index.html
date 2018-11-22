@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Han Tao">
+    
+    
+    
+    
+    
+    
+    <title>Python DB Mysql | 韩涛的个人主页</title>
+    <link href=”https://ishantao.github.io“ rel=”prefetch” />
+    <div id="landlord">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+    <div class="hide-button">隐藏</div>
+</div>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+    <script src="/js/live2d.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/highslide/highslide-full.min.js"></script>
+    <link rel="stylesheet" href="/js/highslide/highslide.css">
+    <link rel="stylesheet" href="/css/live2d.css">
+    
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+    <script type="text/javascript">
+    var message_Path = '../live2d/';
+    var home_Path = 'hant.live';
+    loadlive2d("live2d", "/live2d/model/tia/model.json");
+    </script>
+    <script src="/js/message.js"></script>
+</head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="https://ishantao.github.io" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;"></a>
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="https://ishantao.github.io">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">韩涛的个人主页</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/学习/">-学习</a>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Javascript/">-Javascript</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/Python/">Python</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/JSON-Ajax/">-JSON -Ajax</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="https://ishantao.github.io">韩涛的个人主页</a>
+        >
+        <span>Python DB Mysql</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2018/10/26/Python-DB-Mysql/">Python DB Mysql</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Python/">Python</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2018-10-26
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2018/10/26/Python-DB-Mysql/">Python DB Mysql</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2018-10-26
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Python/">Python</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="数据库连接"><a href="#数据库连接" class="headerlink" title="数据库连接"></a>数据库连接</h2><h3 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h3><p>以下实例链接 Mysql 的 TESTDB 数据库：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开数据库连接</span></span><br><span class="line">db = pymysql.connect(<span class="string">"localhost"</span>,<span class="string">"root"</span>,<span class="string">"123456"</span>,<span class="string">"python_db"</span> )</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用 cursor() 方法创建一个游标对象 cursor</span></span><br><span class="line">cursor = db.cursor()</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用 execute()  方法执行 SQL 查询 </span></span><br><span class="line">cursor.execute(<span class="string">"SELECT VERSION()"</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用 fetchone() 方法获取单条数据.</span></span><br><span class="line">data = cursor.fetchone()</span><br><span class="line"> </span><br><span class="line"><span class="keyword">print</span> (<span class="string">"Database version : %s "</span> % data)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 关闭数据库连接</span></span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>
+<p>执行以上脚本输出结果如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Database version : <span class="number">5.5</span><span class="number">.20</span>-log</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="创建数据库表"><a href="#创建数据库表" class="headerlink" title="创建数据库表"></a>创建数据库表</h2><p>如果数据库连接存在我们可以使用execute()方法来为数据库创建表，如下所示创建表EMPLOYEE：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开数据库连接</span></span><br><span class="line">db = pymysql.connect(<span class="string">"localhost"</span>,<span class="string">"testuser"</span>,<span class="string">"test123"</span>,<span class="string">"TESTDB"</span> )</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用 cursor() 方法创建一个游标对象 cursor</span></span><br><span class="line">cursor = db.cursor()</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用 execute() 方法执行 SQL，如果表存在则删除</span></span><br><span class="line">cursor.execute(<span class="string">"DROP TABLE IF EXISTS EMPLOYEE"</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用预处理语句创建表</span></span><br><span class="line">sql = <span class="string">"""CREATE TABLE EMPLOYEE (</span></span><br><span class="line"><span class="string">         FIRST_NAME  CHAR(20) NOT NULL,</span></span><br><span class="line"><span class="string">         LAST_NAME  CHAR(20),</span></span><br><span class="line"><span class="string">         AGE INT,  </span></span><br><span class="line"><span class="string">         SEX CHAR(1),</span></span><br><span class="line"><span class="string">         INCOME FLOAT )"""</span></span><br><span class="line"> </span><br><span class="line">cursor.execute(sql)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 关闭数据库连接</span></span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="数据库插入操作"><a href="#数据库插入操作" class="headerlink" title="数据库插入操作"></a>数据库插入操作</h2><p>以下实例使用执行 SQL INSERT 语句向表 EMPLOYEE 插入记录：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开数据库连接</span></span><br><span class="line">db = pymysql.connect(<span class="string">"localhost"</span>,<span class="string">"testuser"</span>,<span class="string">"test123"</span>,<span class="string">"TESTDB"</span> )</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用cursor()方法获取操作游标 </span></span><br><span class="line">cursor = db.cursor()</span><br><span class="line"> </span><br><span class="line"><span class="comment"># SQL 插入语句</span></span><br><span class="line">sql = <span class="string">"""INSERT INTO EMPLOYEE(FIRST_NAME,</span></span><br><span class="line"><span class="string">         LAST_NAME, AGE, SEX, INCOME)</span></span><br><span class="line"><span class="string">         VALUES ('Mac', 'Mohan', 20, 'M', 2000)"""</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   <span class="comment"># 执行sql语句</span></span><br><span class="line">   cursor.execute(sql)</span><br><span class="line">   <span class="comment"># 提交到数据库执行</span></span><br><span class="line">   db.commit()</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">   <span class="comment"># 如果发生错误则回滚</span></span><br><span class="line">   db.rollback()</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 关闭数据库连接</span></span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>
+<p>以上例子也可以写成如下形式：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开数据库连接</span></span><br><span class="line">db = pymysql.connect(<span class="string">"localhost"</span>,<span class="string">"testuser"</span>,<span class="string">"test123"</span>,<span class="string">"TESTDB"</span> )</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用cursor()方法获取操作游标 </span></span><br><span class="line">cursor = db.cursor()</span><br><span class="line"> </span><br><span class="line"><span class="comment"># SQL 插入语句</span></span><br><span class="line">sql = <span class="string">"INSERT INTO EMPLOYEE(FIRST_NAME, \</span></span><br><span class="line"><span class="string">       LAST_NAME, AGE, SEX, INCOME) \</span></span><br><span class="line"><span class="string">       VALUES ('%s', '%s', '%d', '%c', '%d' )"</span> % \</span><br><span class="line">       (<span class="string">'Mac'</span>, <span class="string">'Mohan'</span>, <span class="number">20</span>, <span class="string">'M'</span>, <span class="number">2000</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   <span class="comment"># 执行sql语句</span></span><br><span class="line">   cursor.execute(sql)</span><br><span class="line">   <span class="comment"># 执行sql语句</span></span><br><span class="line">   db.commit()</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">   <span class="comment"># 发生错误时回滚</span></span><br><span class="line">   db.rollback()</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 关闭数据库连接</span></span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>
+<p>以下代码使用变量向SQL语句中传递参数:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">..................................</span><br><span class="line">user_id = <span class="string">"test123"</span></span><br><span class="line">password = <span class="string">"password"</span></span><br><span class="line"></span><br><span class="line">con.execute(<span class="string">'insert into Login values("%s", "%s")'</span> % \</span><br><span class="line">             (user_id, password))</span><br><span class="line">..................................</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="数据库查询操作"><a href="#数据库查询操作" class="headerlink" title="数据库查询操作"></a>数据库查询操作</h2><p>Python查询Mysql使用 fetchone() 方法获取单条数据, 使用fetchall() 方法获取多条数据。</p>
+<ul>
+<li><strong>fetchone():</strong> 该方法获取下一个查询结果集。结果集是一个对象</li>
+<li><strong>fetchall():</strong> 接收全部的返回结果行.</li>
+<li><strong>rowcount:</strong> 这是一个只读属性，并返回执行execute()方法后影响的行数。</li>
+</ul>
+<h3 id="实例：-1"><a href="#实例：-1" class="headerlink" title="实例："></a>实例：</h3><p>查询EMPLOYEE表中salary（工资）字段大于1000的所有数据：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开数据库连接</span></span><br><span class="line">db = pymysql.connect(<span class="string">"localhost"</span>,<span class="string">"testuser"</span>,<span class="string">"test123"</span>,<span class="string">"TESTDB"</span> )</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用cursor()方法获取操作游标 </span></span><br><span class="line">cursor = db.cursor()</span><br><span class="line"> </span><br><span class="line"><span class="comment"># SQL 查询语句</span></span><br><span class="line">sql = <span class="string">"SELECT * FROM EMPLOYEE \</span></span><br><span class="line"><span class="string">       WHERE INCOME &gt; '%d'"</span> % (<span class="number">1000</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   <span class="comment"># 执行SQL语句</span></span><br><span class="line">   cursor.execute(sql)</span><br><span class="line">   <span class="comment"># 获取所有记录列表</span></span><br><span class="line">   results = cursor.fetchall()</span><br><span class="line">   <span class="keyword">for</span> row <span class="keyword">in</span> results:</span><br><span class="line">      fname = row[<span class="number">0</span>]</span><br><span class="line">      lname = row[<span class="number">1</span>]</span><br><span class="line">      age = row[<span class="number">2</span>]</span><br><span class="line">      sex = row[<span class="number">3</span>]</span><br><span class="line">      income = row[<span class="number">4</span>]</span><br><span class="line">       <span class="comment"># 打印结果</span></span><br><span class="line">      <span class="keyword">print</span> (<span class="string">"fname=%s,lname=%s,age=%d,sex=%s,income=%d"</span> % \</span><br><span class="line">             (fname, lname, age, sex, income ))</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">   <span class="keyword">print</span> (<span class="string">"Error: unable to fetch data"</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 关闭数据库连接</span></span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>
+<p>以上脚本执行结果如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fname=Mac, lname=Mohan, age=<span class="number">20</span>, sex=M, income=<span class="number">2000</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="数据库更新操作"><a href="#数据库更新操作" class="headerlink" title="数据库更新操作"></a>数据库更新操作</h2><p>更新操作用于更新数据表的的数据，以下实例将 TESTDB 表中 SEX 为 ‘M’ 的 AGE 字段递增 1：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开数据库连接</span></span><br><span class="line">db = pymysql.connect(<span class="string">"localhost"</span>,<span class="string">"testuser"</span>,<span class="string">"test123"</span>,<span class="string">"TESTDB"</span> )</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用cursor()方法获取操作游标 </span></span><br><span class="line">cursor = db.cursor()</span><br><span class="line"> </span><br><span class="line"><span class="comment"># SQL 更新语句</span></span><br><span class="line">sql = <span class="string">"UPDATE EMPLOYEE SET AGE = AGE + 1 WHERE SEX = '%c'"</span> % (<span class="string">'M'</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   <span class="comment"># 执行SQL语句</span></span><br><span class="line">   cursor.execute(sql)</span><br><span class="line">   <span class="comment"># 提交到数据库执行</span></span><br><span class="line">   db.commit()</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">   <span class="comment"># 发生错误时回滚</span></span><br><span class="line">   db.rollback()</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 关闭数据库连接</span></span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="删除操作"><a href="#删除操作" class="headerlink" title="删除操作"></a>删除操作</h2><p>删除操作用于删除数据表中的数据，以下实例演示了删除数据表 EMPLOYEE 中 AGE 大于 20 的所有数据：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 打开数据库连接</span></span><br><span class="line">db = pymysql.connect(<span class="string">"localhost"</span>,<span class="string">"testuser"</span>,<span class="string">"test123"</span>,<span class="string">"TESTDB"</span> )</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用cursor()方法获取操作游标 </span></span><br><span class="line">cursor = db.cursor()</span><br><span class="line"> </span><br><span class="line"><span class="comment"># SQL 删除语句</span></span><br><span class="line">sql = <span class="string">"DELETE FROM EMPLOYEE WHERE AGE &gt; '%d'"</span> % (<span class="number">20</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   <span class="comment"># 执行SQL语句</span></span><br><span class="line">   cursor.execute(sql)</span><br><span class="line">   <span class="comment"># 提交修改</span></span><br><span class="line">   db.commit()</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">   <span class="comment"># 发生错误时回滚</span></span><br><span class="line">   db.rollback()</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 关闭连接</span></span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="执行事务"><a href="#执行事务" class="headerlink" title="执行事务"></a>执行事务</h2><p>事务机制可以确保数据一致性。</p>
+<p>事务应该具有4个属性：原子性、一致性、隔离性、持久性。这四个属性通常称为ACID特性。</p>
+<ul>
+<li>原子性（atomicity）。一个事务是一个不可分割的工作单位，事务中包括的诸操作要么都做，要么都不做。</li>
+<li>一致性（consistency）。事务必须是使数据库从一个一致性状态变到另一个一致性状态。一致性与原子性是密切相关的。</li>
+<li>隔离性（isolation）。一个事务的执行不能被其他事务干扰。即一个事务内部的操作及使用的数据对并发的其他事务是隔离的，并发执行的各个事务之间不能互相干扰。</li>
+<li>持久性（durability）。持续性也称永久性（permanence），指一个事务一旦提交，它对数据库中数据的改变就应该是永久性的。接下来的其他操作或故障不应该对其有任何影响。</li>
+</ul>
+<p>Python DB API 2.0 的事务提供了两个方法 commit 或 rollback。</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># SQL删除记录语句</span></span><br><span class="line">sql = <span class="string">"DELETE FROM EMPLOYEE WHERE AGE &gt; '%d'"</span> % (<span class="number">20</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   <span class="comment"># 执行SQL语句</span></span><br><span class="line">   cursor.execute(sql)</span><br><span class="line">   <span class="comment"># 向数据库提交</span></span><br><span class="line">   db.commit()</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">   <span class="comment"># 发生错误时回滚</span></span><br><span class="line">   db.rollback()</span><br></pre></td></tr></table></figure>
+<p># SQL删除记录语句 sql = “DELETE FROM EMPLOYEE WHERE AGE &gt; ‘%d’” % (20) try:    # 执行SQL语句    cursor.execute(sql)    # 向数据库提交    db.commit() except:    # 发生错误时回滚    db.rollback()</p>
+<p>对于支持事务的数据库， 在Python数据库编程中，当游标建立之时，就自动开始了一个隐形的数据库事务。</p>
+<p>commit()方法游标的所有更新操作，rollback（）方法回滚当前游标的所有操作。每一个方法都开始了一个新的事务。</p>
+<hr>
+<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><p>DB API中定义了一些数据库操作的错误及异常，下表列出了这些错误和异常:</p>
+<table>
+<thead>
+<tr>
+<th>异常</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Warning</td>
+<td>当有严重警告时触发，例如插入数据是被截断等等。必须是 StandardError 的子类。</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>警告以外所有其他错误类。必须是 StandardError 的子类。</td>
+</tr>
+<tr>
+<td>InterfaceError</td>
+<td>当有数据库接口模块本身的错误（而不是数据库的错误）发生时触发。 必须是Error的子类。</td>
+</tr>
+<tr>
+<td>DatabaseError</td>
+<td>和数据库有关的错误发生时触发。 必须是Error的子类。</td>
+</tr>
+<tr>
+<td>DataError</td>
+<td>当有数据处理时的错误发生时触发，例如：除零错误，数据超范围等等。 必须是DatabaseError的子类。</td>
+</tr>
+<tr>
+<td>OperationalError</td>
+<td>指非用户控制的，而是操作数据库时发生的错误。例如：连接意外断开、 数据库名未找到、事务处理失败、内存分配错误等等操作数据库是发生的错误。 必须是DatabaseError的子类。</td>
+</tr>
+<tr>
+<td>IntegrityError</td>
+<td>完整性相关的错误，例如外键检查失败等。必须是DatabaseError子类。</td>
+</tr>
+<tr>
+<td>InternalError</td>
+<td>数据库的内部错误，例如游标（cursor）失效了、事务同步失败等等。 必须是DatabaseError子类。</td>
+</tr>
+<tr>
+<td>ProgrammingError</td>
+<td>程序错误，例如数据表（table）没找到或已存在、SQL语句语法错误、 参数数量错误等等。必须是DatabaseError的子类。</td>
+</tr>
+<tr>
+<td>NotSupportedError</td>
+<td>不支持错误，指使用了数据库不支持的函数或API等。例如在连接对象上 使用.rollback()函数，然而数据库并不支持事务或者事务已关闭。 必须是DatabaseError的子类。</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</article>
+
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            Han Tao
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/10/29/Python-面向对象/">Python 面向对象</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/10/26/Python-DB-Mysql/">Python DB Mysql</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/10/23/正则/">正则</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/10/23/关于Servlet的参数接收/">关于Servlet的参数接收</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/10/10/Redis/">Redis</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/05/JS-DOM操作/">JS_DOM操作</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/03/JavaScript/">Javascript简单语法</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/08/30/Ajax和Json/">Ajax和Json</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/08/29/hantao/">First</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/08/29/hello-world/">Hello World</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/05/JS-DOM操作/">JS_DOM操作</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/10/29/Python-面向对象/">Python 面向对象</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/10/26/Python-DB-Mysql/">Python DB Mysql</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/08/29/hantao/">First</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/08/30/Ajax和Json/">Ajax和Json</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/09/03/JavaScript/">Javascript简单语法</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/10/10/Redis/">Redis</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/10/23/关于Servlet的参数接收/">关于Servlet的参数接收</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/08/29/hello-world/">Hello World</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/10/23/正则/">正则</a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+                <li class="">
+                    <a href="/2018/10/26/Python-DB-Mysql/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                <li class="">
+                    <a href="/2018/10/26/Python-DB-Mysql/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                <li class="">
+                    <a href="/2018/10/26/Python-DB-Mysql/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/Javascript/" style="font-size: 13.635337642453731px;" class="tag-cloud-link">-Javascript</a>
+    
+    <a href="/tags/Python/" style="font-size: 12.736361628165902px;" class="tag-cloud-link">Python</a>
+    
+    <a href="/tags/JSON-Ajax/" style="font-size: 10.552736524224436px;" class="tag-cloud-link">-JSON -Ajax</a>
+    
+    <a href="/tags/JavaScript/" style="font-size: 9.758257638164224px;" class="tag-cloud-link">-JavaScript</a>
+    
+    <a href="/tags/Redis/" style="font-size: 9.20951486152244px;" class="tag-cloud-link">Redis</a>
+    
+    <a href="/tags/servlet/" style="font-size: 11.868044913818409px;" class="tag-cloud-link">servlet</a>
+    
+</div>
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">哔哩哔哩</a>
+    </li>
+    
+</div>
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/isHanTao/" target="_blank">Github</a>
+    </li>
+    
+</div>
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 Han Tao 
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+<script src="/js/activate-power-mode.js"></script>
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '6'
+    }
+</script>
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+<script src="/js/oni.js"></script>
+
+
+
+</html>

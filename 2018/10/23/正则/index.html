@@ -10,7 +10,7 @@
     
     
     
-    <title>Hello World | 韩涛的个人主页</title>
+    <title>正则 | 韩涛的个人主页</title>
     <link href=”https://ishantao.github.io“ rel=”prefetch” />
     <div id="landlord">
     <div class="message" style="opacity:0"></div>
@@ -212,19 +212,19 @@
         <i class="fa fa-home"></i>
         <a href="https://ishantao.github.io">韩涛的个人主页</a>
         >
-        <span>Hello World</span>
+        <span>正则</span>
     </div>
     <!-- 大型设备详细文章 -->
     <div class="hidden-xs">
         <div class="title-article">
             <h1>
-                <a href="/2018/08/29/hello-world/">Hello World</a>
+                <a href="/2018/10/23/正则/">正则</a>
             </h1>
         </div>
         <div class="tag-article">
             
             <span class="label label-gal">
-                <i class="fa fa-calendar"></i> 2018-08-29
+                <i class="fa fa-calendar"></i> 2018-10-23
             </span>
             
         </div>
@@ -234,11 +234,11 @@
         <center>
             <div class="title-article">
                 <h4>
-                    <a href="/2018/08/29/hello-world/">Hello World</a>
+                    <a href="/2018/10/23/正则/">正则</a>
                 </h4>
             </div>
             <p>
-                <i class="fa fa-calendar"></i> 2018-08-29
+                <i class="fa fa-calendar"></i> 2018-10-23
             </p>
             <p>
                 
@@ -247,15 +247,144 @@
         </center>
     </div>
     <div class="content-article">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="正则的简介"><a href="#正则的简介" class="headerlink" title="正则的简介"></a>正则的简介</h2><p>​    <strong>正则表达式</strong>，又称规则表达式<strong>。</strong>（英语：Regular Expression，在代码中常简写为regex、regexp或RE），计算机科学的一个概念。正则表达式通常被用来检索、替换那些符合某个模式(规则)的文本。 </p>
+<h2 id="普通字符"><a href="#普通字符" class="headerlink" title="普通字符"></a>普通字符</h2><p>普通字符包括没有显式指定为元字符的所有可打印和不可打印字符。这包括所有大写和小写字母、所有数字、所有标点符号和一些其他符号。</p>
+<hr>
+<h2 id="非打印字符"><a href="#非打印字符" class="headerlink" title="非打印字符"></a>非打印字符</h2><p>非打印字符也可以是正则表达式的组成部分。下表列出了表示非打印字符的转义序列：</p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\cx</td>
+<td>匹配由x指明的控制字符。例如， \cM 匹配一个 Control-M 或回车符。x 的值必须为 A-Z 或 a-z 之一。否则，将 c 视为一个原义的 ‘c’ 字符。</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>匹配一个换页符。等价于 \x0c 和 \cL。</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>匹配一个换行符。等价于 \x0a 和 \cJ。</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>匹配一个回车符。等价于 \x0d 和 \cM。</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>匹配任何空白字符，包括空格、制表符、换页符等等。等价于 [ \f\n\r\t\v]。注意 Unicode 正则表达式会匹配全角空格符。</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>匹配任何非空白字符。等价于 [^ \f\n\r\t\v]。</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>匹配一个制表符。等价于 \x09 和 \cI。</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>匹配一个垂直制表符。等价于 \x0b 和 \cK。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h2><table>
+<thead>
+<tr>
+<th>特别字符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$</td>
+<td>匹配输入字符串的结尾位置。如果设置了 RegExp 对象的 Multiline 属性，则 $ 也匹配 ‘\n’ 或 ‘\r’。要匹配 $ 字符本身，请使用 \$。</td>
+</tr>
+<tr>
+<td>( )</td>
+<td>标记一个子表达式的开始和结束位置。子表达式可以获取供以后使用。要匹配这些字符，请使用 ( 和 )。</td>
+</tr>
+<tr>
+<td>*</td>
+<td>匹配前面的子表达式零次或多次。要匹配 <em> 字符，请使用   \\</em>。</td>
+</tr>
+<tr>
+<td>+</td>
+<td>匹配前面的子表达式一次或多次。要匹配 + 字符，请使用 \+。</td>
+</tr>
+<tr>
+<td>.</td>
+<td>匹配除换行符 \n 之外的任何单字符。要匹配 . ，请使用          \. 。</td>
+</tr>
+<tr>
+<td>[</td>
+<td>标记一个中括号表达式的开始。要匹配 [，请使用 \[。</td>
+</tr>
+<tr>
+<td>?</td>
+<td>匹配前面的子表达式零次或一次，或指明一个非贪婪限定符。要匹配 ? 字符，请使用 \?。</td>
+</tr>
+<tr>
+<td>\</td>
+<td>将下一个字符标记为或特殊字符、或原义字符、或向后引用、或八进制转义符。例如， ‘n’ 匹配字符 ‘n’。’\n’ 匹配换行符。序列 ‘\‘ 匹配 “\”，而 ‘(‘ 则匹配 “(“。</td>
+</tr>
+<tr>
+<td>^</td>
+<td>匹配输入字符串的开始位置，除非在方括号表达式中使用，此时它表示不接受该字符集合。要匹配 ^ 字符本身，请使用 \^。</td>
+</tr>
+<tr>
+<td>{</td>
+<td>标记限定符表达式的开始。要匹配 {，请使用\ {。</td>
+</tr>
+<tr>
+<td>\</td>
+<td></td>
+<td>指明两项之间的一个选择。要匹配 \</td>
+<td>，请使用 \</td>
+<td>。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="限定符"><a href="#限定符" class="headerlink" title="限定符"></a>限定符</h2><p>限定符用来指定正则表达式的一个给定组件必须要出现多少次才能满足匹配。有 * 或 + 或 ? 或 {n} 或 {n,} 或 {n,m} 共6种。</p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>匹配前面的子表达式零次或多次。例如，zo<em> 能匹配 “z” 以及 “zoo”。</em> 等价于{0,}。</td>
+</tr>
+<tr>
+<td>+</td>
+<td>匹配前面的子表达式一次或多次。例如，’zo+’ 能匹配 “zo” 以及 “zoo”，但不能匹配 “z”。+ 等价于 {1,}。</td>
+</tr>
+<tr>
+<td>?</td>
+<td>匹配前面的子表达式零次或一次。例如，”do(es)?” 可以匹配 “do” 、 “does” 中的 “does” 、 “doxy” 中的 “do” 。? 等价于 {0,1}。</td>
+</tr>
+<tr>
+<td>{n}</td>
+<td>n 是一个非负整数。匹配确定的 n 次。例如，’o{2}’ 不能匹配 “Bob” 中的 ‘o’，但是能匹配 “food” 中的两个 o。</td>
+</tr>
+<tr>
+<td>{n,}</td>
+<td>n 是一个非负整数。至少匹配n 次。例如，’o{2,}’ 不能匹配 “Bob” 中的 ‘o’，但能匹配 “foooood” 中的所有 o。’o{1,}’ 等价于 ‘o+’。’o{0,}’ 则等价于 ‘o*’。</td>
+</tr>
+<tr>
+<td>{n,m}</td>
+<td>m 和 n 均为非负整数，其中n &lt;= m。最少匹配 n 次且最多匹配 m 次。例如，”o{1,3}” 将匹配 “fooooood” 中的前三个 o。’o{0,1}’ 等价于 ‘o?’。请注意在逗号和两个数之间不能有空格。</td>
+</tr>
+</tbody>
+</table>
 
     </div>
 </article>
@@ -460,29 +589,29 @@
         <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
             <ul class="nav nav-pills pills-gal">
                 <li class="">
-                    <a href="/2018/08/29/hello-world/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                    <a href="/2018/10/23/正则/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
                 </li>
                 <li class="">
-                    <a href="/2018/08/29/hello-world/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                    <a href="/2018/10/23/正则/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
                 </li>
                 <li class="">
-                    <a href="/2018/08/29/hello-world/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                    <a href="/2018/10/23/正则/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/Javascript/" style="font-size: 17.80369644892315px;" class="tag-cloud-link">-Javascript</a>
+    <a href="/tags/Javascript/" style="font-size: 8.001264455293981px;" class="tag-cloud-link">-Javascript</a>
     
-    <a href="/tags/Python/" style="font-size: 10.999890272625565px;" class="tag-cloud-link">Python</a>
+    <a href="/tags/Python/" style="font-size: 11.99915281778259px;" class="tag-cloud-link">Python</a>
     
-    <a href="/tags/JSON-Ajax/" style="font-size: 9.013161664029605px;" class="tag-cloud-link">-JSON -Ajax</a>
+    <a href="/tags/JSON-Ajax/" style="font-size: 8.278155362063655px;" class="tag-cloud-link">-JSON -Ajax</a>
     
-    <a href="/tags/JavaScript/" style="font-size: 15.14497024963855px;" class="tag-cloud-link">-JavaScript</a>
+    <a href="/tags/JavaScript/" style="font-size: 18.74608780845177px;" class="tag-cloud-link">-JavaScript</a>
     
-    <a href="/tags/Redis/" style="font-size: 12.531368767274552px;" class="tag-cloud-link">Redis</a>
+    <a href="/tags/Redis/" style="font-size: 12.848018483082296px;" class="tag-cloud-link">Redis</a>
     
-    <a href="/tags/servlet/" style="font-size: 19.096384702435497px;" class="tag-cloud-link">servlet</a>
+    <a href="/tags/servlet/" style="font-size: 9.201816280434805px;" class="tag-cloud-link">servlet</a>
     
 </div>
                 <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
